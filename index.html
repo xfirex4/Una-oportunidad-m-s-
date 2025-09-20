@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>¿Volverías conmigo?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Pantalla inicial -->
+  <section id="start" class="screen active">
+    <button id="startBtn" class="start-btn">Presiónamepp (subile el volumen para que escuches la musicap)</button>
+  </section>
+
+  <!-- Sección de bienvenida -->
+  <section id="intro" class="screen hidden">
+    <div class="intro-text">
+      <h1 id="typing"></h1>
+    </div>
+  </section>
+
+
+  <!-- Sección de menú principal -->
+  <section id="menu" class="screen hidden">
+    <h2>¿Volverías conmigo <span id="her-name">Maurhelen</span>, una vez más?</h2>
+    <div class="buttons">
+      <button id="yesBtn">Síppp (graciassss TT)</button>
+      <button id="noBtn">No 😢</button>
+    </div>
+    <button id="albumBtn" class="album-btn">Álbum de recuerdos importantes :3</button>
+  </section>
+
+<!-- Álbum de fotos -->
+<section id="gallery" class="screen hidden">
+  <h3>Nuestros recuerdos wonitos</h3>
+  <div class="photos">
+    <figure class="tooltip">
+      <img src="foto1.jpg" alt="primera vez">
+      <span class="tooltiptext">primera vez</span>
+      <figcaption>la primera visita (Tenia tantos nervios JAJAJAJJAJA)</figcaption>
+    </figure>
+
+    <figure class="tooltip">
+      <img src="foto2.jpg" alt="tu vestido celste :3">
+      <span class="tooltiptext">tu vestido celste :3</span>
+      <figcaption>ese dia fuimos a algun lugar y llevastes ese vestido tan wonito (nunca t lo volviste a poner T_T)</figcaption>
+    </figure>
+
+    <figure class="tooltip">
+      <img src="foto3.jpg" alt="el dia q me quede hasta las 1 creo UAJAJAJAJ (solo me habian dado permiso alas 10 mi hermano)">
+      <span class="tooltiptext">el dia q me quede hasta las 1 creo UAJAJAJAJ (solo me habian dado permiso alas 10 mi hermano)</span>
+      <figcaption>el 31 de diciembre ,fue la primera vez que me dejaron quedarme tan tarde ,estuvo wonito el dia y tambien la cena que hicieron ,fue rica ,fue hermoso el dia :3</figcaption>
+    </figure>
+
+    <figure class="tooltip">
+      <img src="foto4.jpg" alt="patas en la venta">
+      <span class="tooltiptext">patas en la venta</span>
+      <figcaption>ese dia andabamos en la venta y aproveche para tomarle foto a tus patas y ala de tu ama tambien JAJAJAJJA ,patassss</figcaption>
+    </figure>
+
+    <figure class="tooltip">
+      <img src="foto5.jpg" alt="fuerza leona (perdi el stiker)">
+      <span class="tooltiptext">fuerza leona (perdi el stiker)</span>
+      <figcaption>grrrr ,ese dia andabas señora leona ,fuerza leona JAJAJAJAJAJAJAJJA ,guapa t mirabas</figcaption>
+    </figure>
+
+    <figure class="tooltip">
+      <img src="foto6.jpg" alt="la excursion mas wonita de mi vida">
+      <span class="tooltiptext">la excursion mas wonita de mi vida</span>
+      <figcaption>el dia de mi primera excursion (y ultima excursion si no volvemos T_T ,JAJAJAJ),fue el mejor dia de mi vida ,ademas de eso t mirabas muy bonita ,cuando fuimos al mirador de catarina ,te acordaaa?? ,el aire como nos daba en la cara ,aun que fue solo un ratito porque la señora de la excursion andaba ocupada </figcaption>
+    </figure>
+
+    <figure class="tooltip">
+      <img src="foto7.jpg" alt="no pudimos ir ala rueda pq ya era de noche ,ni a un juego fuimos T^T">
+      <span class="tooltiptext">no pudimos ir ala rueda pq ya era de noche ,ni a un juego fuimos T^T</span>
+      <figcaption>estaba bonita esa noche ,estabamos jugando con una botella antes de irnos en el busss :3 (ultima foto T_T)</figcaption>
+    </figure>
+  </div>
+</section>
+
+    <button id="backBtn" class="back-btn">⬅ Volver al menú</button>
+  </section>
+
+  <!-- Fondos animados (pétalos de cerezo) -->
+  <div id="petals"></div>
+
+  <!-- Audio -->
+  <audio id="bgMusic" src="musica.mp3" loop></audio>
+  <audio id="clickSound" src="click.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

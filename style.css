@@ -1,0 +1,147 @@
+:root {
+  --bg: #ffeef6;
+  --accent: #ff6b9c;
+  --accent-light: #ff9fc1;
+  --text: #2d2d2d;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.screen.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hidden {
+  display: none;
+}
+
+h1, h2, h3 {
+  margin-bottom: 20px;
+}
+
+#typing {
+  font-size: 22px;
+  line-height: 1.6;
+  white-space: pre-line;
+  animation: fadeIn 1s ease forwards;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+button {
+  background: linear-gradient(45deg, var(--accent), var(--accent-light));
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.2s, opacity 0.3s;
+}
+
+button:hover {
+  transform: scale(1.08);
+  opacity: 0.9;
+}
+
+.album-btn {
+  margin-top: 25px;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.back-btn {
+  margin-top: 30px;
+  background: #666;
+  font-size: 16px;
+}
+
+.photos {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.photos figure {
+  background: white;
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.photos img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+figcaption {
+  font-size: 15px;
+  color: #444;
+  font-style: italic;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Contenedor de pétalos */
+#petals {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.petal {
+  position: absolute;
+  width: 30px; 
+  height: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: fall linear infinite;
+  opacity: 0.9;
+}
+
+@keyframes fall {
+  0%   { transform: translateX(0) translateY(-10vh) rotate(0deg); opacity: 1; }
+  25%  { transform: translateX(-20px) translateY(25vh) rotate(90deg); }
+  50%  { transform: translateX(20px) translateY(50vh) rotate(180deg); }
+  75%  { transform: translateX(-15px) translateY(75vh) rotate(270deg); }
+  100% { transform: translateX(15px) translateY(110vh) rotate(360deg); opacity: 0; }
+}
